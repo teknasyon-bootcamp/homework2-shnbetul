@@ -20,3 +20,14 @@
  * dosyasını döngü içinde dahil etmeli ve her yazı için detayları göstermelisiniz.
  */
 
+ $isCheck = true;  // ifadesini yazdım ki functions.php çalışınca doğrudan erişemezsiniz yazısı çıkmasın
+ include 'functions.php';  //functions.php dahil edildi
+  
+  $x=getRandomPostCount(3,100); //  getRandomPostCount fonksiyonu çağırılıp random sayı elde edilip $x e atandı
+  
+
+   $posts=getLatestPosts($x); // $posts a random sayı elde ederek fonsiyonun çalışması istenmişti o yüzden atama yapıldı
+   
+   foreach($posts as $key => $post){
+       include 'post.php';        // post.php dahil edildi her random sayı için 
+   }

@@ -16,7 +16,7 @@
  * bekliyoruz. Bununla ilgili detaylı bilgi diğer betiklerde yer alıyor.
  */
 
-function getLatestPosts($count = 5)
+function getLatestPosts($count= 5)
 {
     $posts = [];
     $postTypes = ["urgent", "warning", "normal"];
@@ -49,3 +49,15 @@ EOT;
 
 // Aşağıya fonksiyonu tanımlayabilirsiniz.
 
+echo !isset($isCheck) ? die('You cannot call this script directly!!!!!') : null;  //ischeck ifadesi yoksa çalıştırılamaz yazısı alınacak
+/*
+if (!defined('INDEX')) {
+    die('You cannot call this script directly !');
+ } 
+ 
+ veya bu  ifade kullanılabilir*/
+
+ function getRandomPostCount($min,$max){  //getRandomPostCount fonk. oluşturuldu
+ $x= rand($min,$max);  //random kullanılarak sayı elde edilip atama yapıldı ve bu değer döndürüldü
+    return $x;
+ }
